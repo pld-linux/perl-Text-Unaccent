@@ -30,7 +30,7 @@ Text-Unaccent-1.01 has the same unac.[ch] files than unac-1.1.0.
 %description -l pl
 Text::Unaccent to modu³ dostarczaj±cy funkcje do usuwania akcentów z
 napisów. Na przyk³ad tekst été zostanie zamieniony na ete. Zestaw
-znaków ³añucha wej¶ciowego jest podawany jako argument. Wej¶cie jest
+znaków ³añcucha wej¶ciowego jest podawany jako argument. Wej¶cie jest
 konwertowane do UTF-16 przy u¿yciu iconv(3), usuwane s± akcenty, a
 wynik jest konwertowany z powrotem do oryginalnego zestawu znaków.
 Obs³ugiwane zestawy znaków mo¿na sprawdziæ poleceniem iconv --list.
