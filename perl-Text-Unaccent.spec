@@ -5,15 +5,15 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Text
 %define	pnam	Unaccent
-Summary:	Text::Unaccent - Remove accents from a string
-#Summary(pl):	
+Summary:	Text::Unaccent - remove accents from a string
+Summary(pl):	Text::Unaccent - usuwanie akcentów z napisów
 Name:		perl-Text-Unaccent
 Version:	1.01
 Release:	1
 License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	perl-devel >= 1:5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -26,10 +26,17 @@ converted to UTF-16 using iconv(3), accents are stripped and the
 result is converted back to the original charset. The iconv --list
 command on GNU/Linux will show all charset supported.
 
-Text-Unaccent-1.01 has the same unac.[ch] files than unac-1.1.0
+Text-Unaccent-1.01 has the same unac.[ch] files than unac-1.1.0.
 
-# %description -l pl
-# TODO
+%description -l pl
+Text::Unaccent to modu³ dostarczaj±cy funkcje do usuwania akcentów z
+napisów. Na przyk³ad tekst été zostanie zamieniony na ete. Zestaw
+znaków ³añucha wej¶ciowego jest podawany jako argument. Wej¶cie jest
+konwertowane do UTF-16 przy u¿yciu iconv(3), usuwane s± akcenty, a
+wynik jest konwertowany z powrotem do oryginalnego zestawu znaków.
+Obs³ugiwane zestawy znaków mo¿na sprawdziæ poleceniem iconv --list.
+
+Text-Unaccent-1.01 ma te same pliki unac.[ch] co unac-1.1.0.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -54,8 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
-%{perl_vendorarch}/%{pdir}/*.pm
-%dir %{perl_vendorarch}/auto/%{pdir}/%{pnam}
-%{perl_vendorarch}/auto/%{pdir}/%{pnam}/*.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/%{pdir}/%{pnam}/*.so
+%{perl_vendorarch}/Text/*.pm
+%dir %{perl_vendorarch}/auto/Text/Unaccent
+%{perl_vendorarch}/auto/Text/Unaccent/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Text/Unaccent/*.so
 %{_mandir}/man3/*
