@@ -9,13 +9,12 @@ Summary:	Text::Unaccent - remove accents from a string
 Summary(pl):	Text::Unaccent - usuwanie akcentów z napisów
 Name:		perl-Text-Unaccent
 Version:	1.01
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
