@@ -3,8 +3,8 @@
 %bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Text
-%define	pnam	Unaccent
+%define		pdir	Text
+%define		pnam	Unaccent
 Summary:	Text::Unaccent - remove accents from a string
 Summary(pl):	Text::Unaccent - usuwanie akcentów z napisów
 Name:		perl-Text-Unaccent
