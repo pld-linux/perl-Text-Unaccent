@@ -6,7 +6,7 @@
 %define		pdir	Text
 %define		pnam	Unaccent
 Summary:	Text::Unaccent - remove accents from a string
-Summary(pl):	Text::Unaccent - usuwanie akcentÛw z napisÛw
+Summary(pl.UTF-8):   Text::Unaccent - usuwanie akcent√≥w z napis√≥w
 Name:		perl-Text-Unaccent
 Version:	1.08
 Release:	1
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Text::Unaccent is a module that provides functions to remove accents
-from a string. For instance the string ÈtÈ will become ete. The
+from a string. For instance the string √©t√© will become ete. The
 charset of the input string is specified as an argument. The input is
 converted to UTF-16 using iconv(3), accents are stripped and the
 result is converted back to the original charset. The iconv --list
@@ -28,13 +28,13 @@ command on GNU/Linux will show all charset supported.
 
 Text-Unaccent-1.01 has the same unac.[ch] files than unac-1.1.0.
 
-%description -l pl
-Text::Unaccent to modu≥ dostarczaj±cy funkcje do usuwania akcentÛw z
-napisÛw. Na przyk≥ad tekst ÈtÈ zostanie zamieniony na ete. Zestaw
-znakÛw ≥aÒcucha wej∂ciowego jest podawany jako argument. Wej∂cie jest
-konwertowane do UTF-16 przy uøyciu iconv(3), usuwane s± akcenty, a
-wynik jest konwertowany z powrotem do oryginalnego zestawu znakÛw.
-Obs≥ugiwane zestawy znakÛw moøna sprawdziÊ poleceniem iconv --list.
+%description -l pl.UTF-8
+Text::Unaccent to modu≈Ç dostarczajƒÖcy funkcje do usuwania akcent√≥w z
+napis√≥w. Na przyk≈Çad tekst √©t√© zostanie zamieniony na ete. Zestaw
+znak√≥w ≈Ça≈Ñcucha wej≈õciowego jest podawany jako argument. Wej≈õcie jest
+konwertowane do UTF-16 przy u≈ºyciu iconv(3), usuwane sƒÖ akcenty, a
+wynik jest konwertowany z powrotem do oryginalnego zestawu znak√≥w.
+Obs≈Çugiwane zestawy znak√≥w mo≈ºna sprawdziƒá poleceniem iconv --list.
 
 Text-Unaccent-1.01 ma te same pliki unac.[ch] co unac-1.1.0.
 
