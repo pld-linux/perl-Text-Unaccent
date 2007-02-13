@@ -6,7 +6,7 @@
 %define		pdir	Text
 %define		pnam	Unaccent
 Summary:	Text::Unaccent - remove accents from a string
-Summary(pl.UTF-8):   Text::Unaccent - usuwanie akcentów z napisów
+Summary(pl.UTF-8):	Text::Unaccent - usuwanie akcentów z napisów
 Name:		perl-Text-Unaccent
 Version:	1.08
 Release:	1
