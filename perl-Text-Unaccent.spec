@@ -63,6 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %{perl_vendorarch}/Text/*.pm
 %dir %{perl_vendorarch}/auto/Text/Unaccent
-%{perl_vendorarch}/auto/Text/Unaccent/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Text/Unaccent/*.so
 %{_mandir}/man3/*
