@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_with	tests		# do not perform "make test"
 
 %define		pdir	Text
 %define		pnam	Unaccent
@@ -9,7 +9,7 @@ Summary:	Text::Unaccent - remove accents from a string
 Summary(pl.UTF-8):	Text::Unaccent - usuwanie akcentów z napisów
 Name:		perl-Text-Unaccent
 Version:	1.08
-Release:	11
+Release:	12
 License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
