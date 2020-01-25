@@ -4,7 +4,6 @@
 
 %define		pdir	Text
 %define		pnam	Unaccent
-%include	/usr/lib/rpm/macros.perl
 Summary:	Text::Unaccent - remove accents from a string
 Summary(pl.UTF-8):	Text::Unaccent - usuwanie akcentów z napisów
 Name:		perl-Text-Unaccent
