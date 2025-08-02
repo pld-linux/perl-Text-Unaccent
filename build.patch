@@ -1,0 +1,22 @@
+--- Text-Unaccent-1.08/unac.h.orig	2004-10-17 21:00:36.000000000 +0200
++++ Text-Unaccent-1.08/unac.h	2025-08-02 02:15:27.392522843 +0200
+@@ -104,7 +104,7 @@
+ #define UNAC_DEBUG_LOW	0x01
+ #define UNAC_DEBUG_HIGH 0x02
+ 
+-#ifdef HAVE_VSNPRINTF
++#if defined(HAVE_VSNPRINTF) || defined(HAS_VSNPRINTF)
+ #define UNAC_DEBUG_AVAILABLE 1
+ /*
+  * Set the unac debug level. <l> is one of:
+--- Text-Unaccent-1.08/unac.c.orig	2004-10-17 21:00:36.000000000 +0200
++++ Text-Unaccent-1.08/unac.c	2025-08-02 02:18:53.364247120 +0200
+@@ -40,7 +40,7 @@
+ #include <string.h>
+ #include <iconv.h>
+ #include <errno.h>
+-#ifdef HAVE_VSNPRINTF
++#if defined(HAVE_VSNPRINTF) || defined(HAS_VSNPRINTF)
+ #include <stdio.h>
+ #include <stdarg.h>
+ #endif /* HAVE_VSNPRINTF */

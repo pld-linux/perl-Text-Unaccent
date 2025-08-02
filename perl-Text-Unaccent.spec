@@ -13,6 +13,8 @@ License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9ac9b28cbb66f4829a50d563ace79cb5
+Patch0:		types.patch
+Patch1:		build.patch
 URL:		http://search.cpan.org/dist/Text-Unaccent/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -40,6 +42,8 @@ Text-Unaccent-1.01 ma te same pliki unac.[ch] co unac-1.1.0.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__perl} Makefile.PL \

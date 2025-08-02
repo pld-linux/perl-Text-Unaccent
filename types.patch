@@ -1,0 +1,25 @@
+--- Text-Unaccent-1.08/unac.c.orig	2004-10-17 21:00:36.000000000 +0200
++++ Text-Unaccent-1.08/unac.c	2025-08-02 02:18:53.364247120 +0200
+@@ -13881,9 +13881,9 @@
+     *out_lengthp = 0;
+   } else {
+     char* utf16 = 0;
+-    int utf16_length = 0;
++    size_t utf16_length = 0;
+     char* utf16_unaccented = 0;
+-    int utf16_unaccented_length = 0;
++    size_t utf16_unaccented_length = 0;
+   
+     if(convert(charset, utf16be(), in, in_length, &utf16, &utf16_length) < 0) {
+       return -1;
+--- Text-Unaccent-1.08/Unaccent.xs.orig	2004-12-29 12:45:18.000000000 +0100
++++ Text-Unaccent-1.08/Unaccent.xs	2025-08-02 02:01:10.095728956 +0200
+@@ -35,7 +35,7 @@
+ #include "unac.h"
+ 
+ static char* buffer;
+-static int buffer_length;
++static size_t buffer_length;
+ 
+ static void unac_debug_print(const char* message, void* data)
+ {
